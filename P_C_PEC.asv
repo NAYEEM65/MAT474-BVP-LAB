@@ -1,7 +1,8 @@
-% Solve the IVP Dy=y-x^2 y(0)=1 by using 4-step adam bashforth method
+% Solve the IVP Dy=y-x^2 y(0)=1 by using P_C method in p(EC)^m
+%mode
 % with h=0.1, where D is the differential operator with respect to x
 %
-function y_c=P_C_PEC(a,h,n,y0)
+function y_c=P_C_PEC(a,h,n,y0,M)
 x=a:h:n*h;
 f=inline('y-x^2');
 for i=1:1:3
