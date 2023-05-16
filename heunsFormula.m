@@ -7,6 +7,7 @@ for i = length(Y)+1 : length(X)
     k4 = increment*func(X(i), Y(i-1)+k1, Z(i-1)+k2, temp);
     Y(i) = Y(i-1) + (k1+k3)/2;
     Z(i) = Z(i-1) + (k2+k4)/2; 
+    
 end
 end
 % Modified Eulerd Method for IVP
