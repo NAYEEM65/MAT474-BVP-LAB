@@ -15,8 +15,8 @@ function u_val = MyPde_Jacobi(a,b,n,N)
 
 clc
 h = (b-a)/n;
-x=a+[0:n]*h;
-y=a+[0:n]*h;
+x=a+0:n*h;
+y=a+0:n*h;
  % Following statement is initial condition
 u_old = ini(x,y,n); % External Function ini()
 M = Matrix_M(n);
@@ -24,7 +24,7 @@ D = Matrix_D(n);
 L = Matrix_L(n);
 U = Matrix_U(n);
 
-M==D-L-U;
+M=D-L-U;
 
 % Determine of the jacobi iteration matrix
 inv_D = inv(D);

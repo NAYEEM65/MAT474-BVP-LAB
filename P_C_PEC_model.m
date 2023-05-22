@@ -4,7 +4,7 @@
 %
 function y_c=P_C_PEC_model(a,h,n,y0,M)
 x=a:h:n*h;
-f=inline('y-x^2');
+f=@(x,y)('y-x^2');
 for i=1:1:3
     y_p=R_K_method(a,h,n,y0,f);
     f_eva(i)=f(x(i),y_p(i));
